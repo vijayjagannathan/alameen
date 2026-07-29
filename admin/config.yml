@@ -1,0 +1,36 @@
+# Decap CMS configuration for Lodge Al-Ameen's Articles section.
+#
+# THE FOUR VALUES BELOW MUST BE FILLED IN AFTER YOU SIGN UP AT decapbridge.com
+# — they are specific to your GitHub repo and your DecapBridge site. Until
+# they're filled in, /admin/ will load but nobody will be able to log in.
+# See README.md → "Setting up article publishing" for the full walkthrough.
+
+backend:
+  name: git-gateway
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME     # e.g. vjagannathan/lodge-al-ameen-website
+  branch: main
+  identity_url: https://auth.decapbridge.com/sites/YOUR-SITE-ID   # from your DecapBridge dashboard
+  gateway_url: https://gateway.decapbridge.com
+
+# Where saved articles are committed in the repo, and where the site's
+# uploaded images are stored.
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    folder: "articles"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Author", name: "author", widget: "string", default: "Lodge Al-Ameen" }
+      - { label: "Excerpt (shown on the Articles list page)", name: "excerpt", widget: "text", required: false }
+      - { label: "Image (optional, shown at the top of the article)", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }

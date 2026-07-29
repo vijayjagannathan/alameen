@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Square and compasses emblem">
+  <!-- PLACEHOLDER emblem — replace this file with the lodge's official crest artwork when available -->
+  <g fill="none" stroke="#1f3d2b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- compasses -->
+    <path d="M60 14 L26 86"/>
+    <path d="M60 14 L94 86"/>
+    <circle cx="60" cy="16" r="7" fill="#1f3d2b"/>
+    <!-- square -->
+    <path d="M22 74 L60 106 L98 74"/>
+    <path d="M31 81.5 L60 96 L89 81.5" stroke-width="3"/>
+  </g>
+  <text x="60" y="66" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#b08d3e">G</text>
+</svg>

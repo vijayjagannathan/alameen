@@ -1,0 +1,143 @@
+/* Lodge Al Ameen No. 1412 SC — styled after the Grand Lodge of Scotland site:
+   white ground, centred crest and serif wordmark, deep forest-green bands,
+   italic serif headings, restrained gold. */
+:root{
+  --green:#1f3d2b;
+  --green-deep:#16301f;
+  --ink:#2c2c2c;
+  --muted:#5c5c54;
+  --paper:#ffffff;
+  --soft:#f5f3ec;
+  --line:#e0ddd2;
+  --gold:#b08d3e;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;font-size:16.5px}
+img{max-width:100%;display:block}
+a{color:var(--green)}
+
+/* Header — centred crest + wordmark, nav beneath (GLoS pattern) */
+.site-header{background:var(--paper);border-bottom:1px solid var(--line)}
+.header-top{text-align:center;padding:26px 20px 10px}
+.header-top img{width:72px;height:72px;margin:0 auto 10px}
+.wordmark{font-family:var(--serif);font-size:26px;font-weight:600;color:var(--ink);letter-spacing:.5px}
+.wordmark-sub{display:block;font-family:var(--sans);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-top:4px}
+nav.main-nav{display:flex;justify-content:center;gap:4px;flex-wrap:wrap;padding:10px 16px 16px}
+nav.main-nav a{color:var(--ink);text-decoration:none;font-size:15px;padding:8px 16px;border-radius:4px}
+nav.main-nav a:hover{color:var(--green);background:var(--soft)}
+nav.main-nav a.active{color:var(--green);font-weight:600;box-shadow:inset 0 -2px 0 var(--gold)}
+
+/* Hero — full-width photograph with caption bar */
+.hero-photo{position:relative}
+.hero-photo img{width:100%;height:min(64vh,560px);object-fit:cover;object-position:center 20%}
+.hero-photo .hero-caption{background:var(--green-deep);color:#f4efe4;text-align:center;padding:34px 20px}
+.hero-caption h1{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(30px,5vw,46px);letter-spacing:.5px}
+.hero-caption p{margin-top:8px;font-size:14px;letter-spacing:2.5px;text-transform:uppercase;color:#cbb87a}
+
+/* Page hero (inner pages, no photo) */
+.page-hero{background:var(--green-deep);color:#f4efe4;text-align:center;padding:56px 20px}
+.page-hero h1{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(30px,5vw,44px)}
+.page-hero p{margin-top:8px;font-size:14px;letter-spacing:2.5px;text-transform:uppercase;color:#cbb87a}
+
+/* Layout */
+.section{max-width:1080px;margin:0 auto;padding:64px 20px}
+.section.narrow{max-width:800px}
+.section h2{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(26px,4vw,36px);text-align:center;color:var(--green);margin-bottom:14px}
+.kicker{display:block;text-align:center;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.lede{text-align:center;max-width:680px;margin:0 auto 40px;color:var(--muted)}
+.prose p{margin-bottom:20px}
+.prose p:last-child{margin-bottom:0}
+
+/* Green band (GLoS "strategic vision" pattern) */
+.green-band{background:var(--green);color:#f4efe4}
+.green-band .section h2,.green-band .kicker{color:#f4efe4}
+.green-band .kicker{color:#cbb87a}
+.green-band .lede{color:#d8d2c0}
+.soft-band{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+/* Buttons */
+.btn{display:inline-block;padding:13px 28px;border-radius:4px;text-decoration:none;font-size:15px;letter-spacing:.5px;border:1.5px solid var(--green);transition:all .2s}
+.btn-solid{background:var(--green);color:#fff;font-weight:600}
+.btn-solid:hover{background:var(--green-deep);border-color:var(--green-deep)}
+.btn-ghost{color:var(--green)}
+.btn-ghost:hover{background:var(--green);color:#fff}
+.green-band .btn-ghost{color:#f4efe4;border-color:#cbb87a}
+.green-band .btn-ghost:hover{background:#cbb87a;color:var(--green-deep)}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+
+/* Cards */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:36px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:28px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.card h3{font-family:var(--serif);font-size:23px;color:var(--green);margin-bottom:10px}
+.card p{font-size:15px;color:var(--muted)}
+.card .card-link{display:inline-block;margin-top:14px;font-size:13.5px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:var(--gold)}
+
+/* Timeline */
+.timeline{max-width:740px;margin:0 auto}
+.tl-item{position:relative;padding:0 0 40px 34px;border-left:2px solid var(--line)}
+.tl-item:last-child{border-left-color:transparent;padding-bottom:0}
+.tl-item::before{content:"";position:absolute;left:-8px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--gold)}
+.tl-year{display:block;font-family:var(--serif);font-size:23px;font-weight:600;color:var(--green);margin-bottom:6px}
+.tl-item p{color:var(--muted)}
+
+/* Meetings */
+.meet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:30px}
+.meet-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:22px;text-align:center}
+.meet-card .d{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--green)}
+.meet-card .t{font-size:14px;color:var(--muted);margin-top:4px}
+.map-wrap{margin-top:40px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.map-wrap iframe{display:block;width:100%;height:380px;border:0}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.gallery-grid figure{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.gallery-grid img{width:100%;height:220px;object-fit:cover}
+.gallery-grid figcaption{padding:10px 14px;font-size:13.5px;color:var(--muted)}
+
+/* Forms */
+form.contact-form{max-width:620px;margin:0 auto}
+.field{margin-bottom:22px}
+.field label{display:block;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);margin-bottom:8px;font-weight:600}
+.field input,.field textarea{width:100%;background:var(--paper);border:1px solid #c9c5b8;border-radius:4px;padding:13px;color:var(--ink);font-family:var(--sans);font-size:16px}
+.field input:focus,.field textarea:focus{outline:2px solid var(--green);border-color:var(--green)}
+.form-note{text-align:center;font-size:14px;color:var(--muted);margin-top:18px}
+.contact-alt{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:34px 0 0}
+button.btn{cursor:pointer;font-family:var(--sans)}
+
+/* Footer */
+.site-footer{background:var(--green-deep);color:#d8d2c0;text-align:center;padding:44px 20px;margin-top:64px}
+.site-footer p{font-size:14px}
+.site-footer a{color:#cbb87a}
+.site-footer .fine{font-size:12.5px;color:#9aa08c;margin-top:10px}
+
+/* Footer affiliation badges (Grand Lodge of Scotland / District Grand Lodge of India) */
+.affiliation-row{display:flex;justify-content:center;align-items:flex-start;gap:40px;flex-wrap:wrap;margin:26px 0 6px}
+.affiliation-row a{display:flex;flex-direction:column;align-items:center;text-decoration:none;max-width:160px}
+.affiliation-row img{height:64px;width:auto;margin:0 auto 8px;background:#fff;padding:6px;border-radius:4px}
+.affiliation-row span{display:block;font-size:12px;letter-spacing:.5px;color:#cbb87a;line-height:1.4}
+.affiliation-mark{height:64px;width:100px;margin:0 auto 8px;background:#fff;border-radius:4px;color:var(--green-deep);font-family:var(--serif);font-weight:600;font-size:15px;letter-spacing:1px;display:flex;align-items:center;justify-content:center}
+
+/* Gallery lightbox */
+.gallery-item{display:block;cursor:zoom-in;border-radius:6px;overflow:hidden}
+.gallery-item img{transition:transform .25s ease}
+.gallery-item:hover img{transform:scale(1.04)}
+.lightbox{position:fixed;inset:0;background:rgba(10,15,10,.92);display:flex;align-items:center;justify-content:center;z-index:1000;padding:40px}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:min(90vw,1100px);max-height:85vh;border-radius:4px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;padding:14px;line-height:1;opacity:.85}
+.lightbox-close:hover,.lightbox-prev:hover,.lightbox-next:hover{opacity:1}
+.lightbox-close{top:14px;right:18px;font-size:36px}
+.lightbox-prev{left:6px;top:50%;transform:translateY(-50%)}
+.lightbox-next{right:6px;top:50%;transform:translateY(-50%)}
+@media(max-width:640px){
+  .lightbox-prev,.lightbox-next{font-size:22px;padding:10px}
+}
+
+@media(max-width:640px){
+  .section{padding:46px 16px}
+  .hero-photo img{height:38vh}
+  .affiliation-row{gap:26px}
+}

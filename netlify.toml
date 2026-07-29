@@ -1,0 +1,7 @@
+# Netlify build settings. Netlify already rebuilds automatically on every
+# push to the connected GitHub repo — including the commits Decap CMS makes
+# when someone saves an article through /admin/ — so nothing extra is needed
+# beyond telling it what command to run and what folder to publish.
+[build]
+  command = "node scripts/build-articles.js"
+  publish = "."
