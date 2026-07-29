@@ -1,3 +1,8 @@
+
+# Decap CMS configuration for Lodge Al-Ameen's Articles section.
+# Auth is handled by DecapBridge (PKCE). Site ID and endpoints come from
+# the DecapBridge dashboard - do not edit them by hand.
+ 
 # Use DecapBridge PKCE auth (required)
 backend:
   name: git-gateway
@@ -8,10 +13,29 @@ backend:
   auth_endpoint: /sites/9f80bd73-7774-43dc-878c-908da6458b67/pkce
   auth_token_endpoint: /sites/9f80bd73-7774-43dc-878c-908da6458b67/token
   gateway_url: https://gateway.decapbridge.com
-
+ 
+  # See who did what
+  commit_messages:
+    create: Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+ 
+# Maps DecapBridge login details onto the commit messages above
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+ 
+# Adds a "view site" link inside the CMS
+site_url: https://lodgealameen.netlify.app
+ 
+# Where saved articles are committed, and where uploaded images are stored
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
-
+ 
 collections:
   - name: "articles"
     label: "Articles"
@@ -21,7 +45,7 @@ collections:
     slug: "{{slug}}"
     extension: "md"
     format: "frontmatter"
-    summary: "{{title}} — {{date}}"
+    summary: "{{title}} - {{date}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
