@@ -5,7 +5,7 @@ author: Vijay Jagannathan, Secretary, Lodge Al Ameen No. 1412 SC
 excerpt: My uncle told me just enough to make me curious and then refused to
   tell me the rest. He said I would have to go and join a lodge to understand
   what his father and grandfather had understood. He was right.
-image: /images/uploads/vijay.jpeg
+image: ""
 ---
 Every family keeps papers that nobody reads. Ours kept a summons.
 
@@ -30,5 +30,3 @@ What I found was not the thing I had gone looking for. I had been chasing whatev
 Today I am the Secretary of Lodge Al Ameen No. 1412 SC. Among the duties of that office is issuing the summons to the brethren before each meeting: the date, the place, the expectation of attendance. Nothing else explained.
 
 I think about that whenever I send one out. Somewhere there may be a young man who finds it years from now, folded in with the electricity bills, wondering what on earth a lodge is. I hope he asks. I hope somebody tells him just enough.
-
-*Photo: the author in his Master Mason's apron.*
