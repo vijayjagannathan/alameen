@@ -5,7 +5,7 @@ author: Vijay Jagannathan, Secretary, Lodge Al Ameen No. 1412 SC
 excerpt: My uncle told me just enough to make me curious and then refused to
   tell me the rest. He said I would have to go and join a lodge to understand
   what his father and grandfather had understood. He was right.
-image: ""
+image: /images/uploads/vijay-lodge.jpg
 ---
 Every family keeps papers that nobody reads. Ours kept a summons.
 
