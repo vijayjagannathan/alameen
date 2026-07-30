@@ -1,7 +1,7 @@
 ---
 title: Following a Summons
 date: 2026-07-30
-author: Vijay Jagannathan, Secretary, Lodge Al-Ameen, 1412 SC
+author: Vijay Jagannathan
 excerpt: Two generations before me were Freemasons. My father was not.
 image: /images/uploads/banner-pavement-and-benches.jpg
 ---
